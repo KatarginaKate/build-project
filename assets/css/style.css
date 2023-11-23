@@ -12,8 +12,8 @@
 }
 
 .svg-builds path:hover {
-    fill: #05FFFF;
-    stroke: #05FFFF;
+    fill: #0FA5A5;
+    stroke: #0FA5A5;
     stroke-width: 3;
     fill-opacity: .3;
 }
