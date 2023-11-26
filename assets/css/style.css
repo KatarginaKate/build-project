@@ -1,41 +1,70 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
- 
-
-.svg-builds path {
-    fill: #05ffff00;
-    stroke: #05ffff00;
-    cursor: pointer;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.svg-builds path:hover {
-    fill: #0FA5A5;
-    stroke: #0FA5A5;
-    stroke-width: 3;
-    fill-opacity: .3;
+.builds-list path {
+  fill: #05ffff00;
+  stroke: #05ffff00;
+  cursor: pointer;
+}
+
+.builds-list path:hover {
+  fill: #0fa5a5;
+  stroke: #0fa5a5;
+  stroke-width: 3;
+  fill-opacity: 0.3;
 }
 
 .builds-info {
-    padding: 48px;
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 10px;
+  position: absolute;
+  padding: 40px;
+  left: 50%;
+  bottom: -90px;
+  transform: translate(-50%, 0);
 }
 
 .builds-info-title {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .info-list {
-    padding: 24px;
-    list-style: none;
-    border-radius: 10px;
+  padding: 24px;
+  list-style: none;
+  border-radius: 10px;
 }
 
-.list-item{
-    margin-bottom: 12px;
+.list-item {
+  margin-bottom: 12px;
+}
+.builds {
+  position: relative;
+  padding: 20px;
+}
+
+.builds-list-poland {
+  max-height: 95vh;
+  width: 100%;
+}
+.builds-list-poland path {
+  fill: #05ffff00;
+  stroke: #05ffff00;
+  cursor: pointer;
+}
+.builds-list-poland path:hover {
+  fill: rgb(4, 11, 51);
+  stroke: rgb(92, 96, 113);
+  stroke-width: 3;
+  fill-opacity: 0.3;
+}
+.builds-list-poland .sales path {
+    fill: rgba(229, 33, 11, 0.271);
+    stroke: #fb1d00;
+    cursor: no-drop;
+}
+.builds-list-poland .sales path:hover {
+    fill: #d10404a1;
+    stroke: #fb0000;
+    fill-opacity: 1;
 }
