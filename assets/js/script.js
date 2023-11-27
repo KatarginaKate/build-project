@@ -13,9 +13,9 @@ const installBuilds =()=> {
 
         const saleItem = document.querySelectorAll('.sales')
    
-        saleItem.forEach((sales, index) =>{
-            sales.setAttribute('data-modal', 'modal-' + (index + 1))
-        })
+        // saleItem.forEach((sales, index) =>{
+        //     sales.setAttribute('data-modal', 'modal-' + (index + 1))
+        // })
 
         item.addEventListener('mouseover', function () {
             const getItemAdress = item.getAttribute('data-adress')
@@ -34,5 +34,6 @@ const installBuilds =()=> {
            }
         })
     })
-};
+}
+document.querySelector('.builds-list-poland') ? installBuilds() : null;
 
