@@ -1,3 +1,6 @@
+
+
+
 const installBuilds =()=> {
     const buildItem = document.querySelectorAll('.build-item path')
     const buildItemAdress = document.querySelector('#adress')

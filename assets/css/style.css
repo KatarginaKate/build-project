@@ -20,9 +20,8 @@
 .builds-info {
   position: absolute;
   padding: 40px;
-  left: 50%;
-  bottom: -90px;
-  transform: translate(-50%, 0);
+  left: 43%;
+  top: calc(760px - 272px);
 }
 
 .builds-info-title {
