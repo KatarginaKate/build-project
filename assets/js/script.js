@@ -1,4 +1,18 @@
+const installCalcHeight =()=> {
+    const buildNav = document.querySelector('.builds-poland-nav')
+    const buildInfo = document.querySelector('.builds-info') 
 
+    function reportWindowSize() {
+        const buildNavHeight = buildNav.offsetHeight
+        const buildInfoHeight = buildInfo.offsetHeight
+        const calcHeight = buildNavHeight - buildInfoHeight;
+        buildInfo.style.top = calcHeight + "px" ;
+    } reportWindowSize()
+
+    window.onresize = reportWindowSize;
+}
+
+document.querySelector('.builds-list-poland') ? installCalcHeight() : null;
 
 
 const installBuilds =()=> {
@@ -6,6 +20,11 @@ const installBuilds =()=> {
     const buildItemAdress = document.querySelector('#adress')
     const buildItemFloors = document.querySelector('#floors')
     const buildItemFlats = document.querySelector('#flats')
+
+    const buildItemFreeFlats = document.querySelector('#free-flats')
+    const buildItemSoldFlats = document.querySelector('#sold-flats')
+    const buildItemActionFlats = document.querySelector('#action-flats')
+    const buildItemReservationFlats = document.querySelector('#reservation-flats')
 
     buildItem.forEach(item => {
         let itemFlats = item.getAttribute('data-flats')
@@ -25,9 +44,19 @@ const installBuilds =()=> {
             const getItemFloors = item.getAttribute('data-floors')
             const getItemFlats = item.getAttribute('data-flats')
 
+            const getItemFreeFlats = item.getAttribute('data-free-flats');
+            const getItemSoldFlats = item.getAttribute('data-sold-flats');
+            const getItemActionFlats = item.getAttribute('data-action-flats');
+            const getItemReservationFlats = item.getAttribute('data-reservation-flats');
+
             buildItemAdress.innerHTML = getItemAdress
             buildItemFloors.innerHTML = getItemFloors
             buildItemFlats.innerHTML = getItemFlats
+            buildItemFreeFlats.innerHTML = getItemFreeFlats
+            buildItemSoldFlats.innerHTML = getItemSoldFlats
+            buildItemActionFlats.innerHTML = getItemActionFlats
+            buildItemReservationFlats.innerHTML = getItemReservationFlats
+            
         })
 
         item.addEventListener('click', function(event){
@@ -66,5 +95,17 @@ function installModal() {
         openModal.classList.remove('show-modal')
         openModal.style.display = "none";
     } 
+    window.addEventListener("keydown", function(event){
+        if (event.key === "Escape"){
+            onCloseModal()
+        }
+    });
+ 
+ 
+    window.onclick = (event) => customModal.forEach(item => {
+        event.target == item ? onCloseModal() : false
+        }
+    );
+
 }
 document.querySelector('.custom-modal') ? installModal() : false;
