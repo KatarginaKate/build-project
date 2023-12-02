@@ -92,11 +92,6 @@
 }
 @media screen and (max-width: 991px) {
 
-  .builds-list-poland{
-    max-width: 100%;
-    width: 370px;
-   
-  }
   .builds-info {
      position: static;
      transform: translate(0, 0);
