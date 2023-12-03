@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #d4e5e5;
+}
+body{
+ background-color: #d5f1f3;
 }
 
 .builds-list path {
@@ -90,6 +92,87 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+/* Flat */
+
+.flat {
+  cursor: pointer;
+}
+
+/* .flat:hover .flat-path {
+  stroke: #11ff00;
+  fill: #00ff3357;
+}
+.flat.active .flat-path {
+  fill: #00ff488d
+} */
+
+.flat-path {
+  fill: rgba(255, 255, 0, 0)
+}
+
+.flat-text {
+  white-space: pre;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0em;
+  fill: #000;
+}
+
+.status-border,
+.status-sell {
+    stroke:black;
+    stroke-width: 2; 
+    fill: #fff;
+}
+
+.flat .status-sell{
+  fill:#00DEFC ;
+}
+.flat:hover .flat-path {
+  stroke: #05ffff80;
+  fill: #05ffff60;
+}
+
+.booking .status-sell{
+  fill:#6B68FF ;
+}
+.booking:hover .flat-path {
+  cursor: no-drop;
+  stroke: #5a58ea;
+  fill: #1d1c6780;
+}
+.sold .status-sell{
+  fill:#D34E4E ;
+}
+.sold:hover .flat-path {
+  cursor: no-drop;
+  stroke: #e46868;
+  fill: #74050583;
+}
+.action .status-sell{
+  fill:#80D34E ;
+}
+.action:hover .flat-path {
+  stroke: #11e20d;
+  fill: #0af20770;
+}
+.flat-info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.flat-item {
+  text-align: center;
+  border: 1px solid;
+  padding: 12px;
+}
+
 @media screen and (max-width: 991px) {
 
   .builds-info {
@@ -98,4 +181,8 @@
      max-width: 370px;
      margin: 0 auto;
   }
+  .flat-info {
+    flex-direction: column;
+    gap: 10px;
+ }
 }
